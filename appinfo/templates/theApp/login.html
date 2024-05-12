@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head> 
+    
+</head>
+<style>
+    .page {
+    background-color: #f7f381;
+    padding: 8px 24px;
+    width: 750px;
+    font-size: 25px;
+    border: 1px solid #f7f381;
+    box-shadow: 0 0 10px 2px #333333;
+    margin: auto;
+}
+ul {
+    margin: 12px;
+}
+
+
+</style>
+  <body>
+    <div class="page">
+        <h1>Login to your Account:</h1>
+        <form action="{% url 'appPages:login' %}" method="post">
+            {% csrf_token %}
+            {{ form}}
+            <button type="submit">Submit</button>
+            <p>Don't have an account ? <a href="{% url 'appPages:register' %}">register page</a></p>
+    </div>
+  </body>
+ <html>
+
